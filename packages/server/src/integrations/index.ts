@@ -13,6 +13,7 @@ import googlesheets from "./googlesheets"
 import firebase from "./firebase"
 import redis from "./redis"
 import snowflake from "./snowflake"
+import github from "./github"
 import { getPlugins } from "../api/controllers/plugin"
 import { SourceName, Integration, PluginType } from "@budibase/types"
 import { getDatasourcePlugin } from "../utilities/fileSystem"
@@ -34,6 +35,7 @@ const DEFINITIONS: { [key: string]: Integration } = {
   [SourceName.FIRESTORE]: firebase.schema,
   [SourceName.REDIS]: redis.schema,
   [SourceName.SNOWFLAKE]: snowflake.schema,
+  [SourceName.GITHUB]: github.schema,
 }
 
 const INTEGRATIONS: { [key: string]: any } = {
@@ -53,6 +55,7 @@ const INTEGRATIONS: { [key: string]: any } = {
   [SourceName.REDIS]: redis.integration,
   [SourceName.FIRESTORE]: firebase.integration,
   [SourceName.SNOWFLAKE]: snowflake.integration,
+  [SourceName.GITHUB]: github.integration,
 }
 
 // optionally add oracle integration if the oracle binary can be installed

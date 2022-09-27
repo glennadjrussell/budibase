@@ -51,6 +51,7 @@ export enum SourceName {
   FIRESTORE = "FIRESTORE",
   REDIS = "REDIS",
   SNOWFLAKE = "SNOWFLAKE",
+  GITHUB = "GITHUB",
   UNKNOWN = "unknown",
 }
 
